@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/menu_top"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_map"
+            android:checked="true"
+            android:icon="@drawable/ic_wales_black"
+            android:title="@string/nav_map" />
+        <item
+            android:id="@+id/nav_list"
+            android:icon="@drawable/ic_list_black_24dp"
+            android:title="@string/nav_list" />
+        <item
+            android:id="@+id/nav_notes"
+            android:icon="@drawable/ic_book_black_24dp"
+            android:title="@string/nav_notes" />
+        <item
+            android:id="@+id/nav_reminders"
+            android:icon="@drawable/ic_reminders_black_24dp"
+            android:title="@string/nav_reminders" />
+        <item
+            android:id="@+id/nav_gpdetails"
+            android:icon="@drawable/ic_local_hospital_black_24dp"
+            android:title="@string/gp_details" />
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings_24dp"
+            android:title="@string/nav_settings" />
+        <item
+            android:id="@+id/nav_app_info"
+            android:icon="@drawable/ic_info_black_24dp"
+            android:title="@string/nav_app_info" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_pan_tool_black_24dp"
+            android:title="@string/nav_help" />
+    </group>
+</menu>

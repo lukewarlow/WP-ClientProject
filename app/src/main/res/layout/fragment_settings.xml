@@ -1,0 +1,349 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_font"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="5dp"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/image_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="23dp"
+            app:srcCompat="@drawable/ic_font_24dp"/>
+
+        <TextView
+            android:id="@+id/text_font_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="70dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/font_size"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/button_fontsize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/ic_settings_24dp"
+            tools:layout_width="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/layout_font"
+        android:layout_marginBottom="8dp"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/image_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="23dp"
+            app:srcCompat="@drawable/ic_language_24dp" />
+
+        <TextView
+            android:id="@+id/text_language_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="70dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/title_language"
+            android:textSize="18sp" />
+
+        <Switch
+            android:id="@+id/switch_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="30dp"
+            android:text="@string/language" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/layout_language"
+        android:layout_marginBottom="8dp"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:id="@+id/layout_permission_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                app:srcCompat="@drawable/ic_gps_24dp" />
+
+            <TextView
+                android:id="@+id/text_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="70dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/location"
+                android:textSize="18sp" />
+
+            <Switch
+                android:id="@+id/switch_location_permission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                android:text="@string/deny" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_postcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/layout_permission_toggle"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+            <TextView
+                android:id="@+id/text_postcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/postcode_request" />
+
+            <EditText
+                android:id="@+id/edit_text_postcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/text_postcode"
+                android:layout_marginTop="43dp"
+                android:hint="@string/postcode"
+                android:maxLength="8"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button_use_postcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/edit_text_postcode"
+                android:layout_marginEnd="30dp"
+                android:text="@string/save" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_radius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/layout_postcode"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/text_radius"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="18dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/select_radius"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_selected_radius"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/text_radius"
+                android:layout_below="@id/text_radius"
+                android:layout_marginTop="5dp"
+                android:text="@string/miles"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/text_selected_radius"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+
+                <TextView
+                    android:id="@+id/text_min_miles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/seek_radius"
+                    android:layout_alignParentStart="true"
+                    android:text="5"/>
+
+                <SeekBar
+                    android:id="@+id/seek_radius"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="266dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toEndOf="@id/text_min_miles"
+                    android:layout_toStartOf="@+id/text_max_miles"
+                    android:max="10"
+                    android:progress="0" />
+
+                <TextView
+                    android:id="@+id/text_max_miles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/seek_radius"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_theme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/layout_location"
+        android:layout_marginBottom="16dp"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:id="@+id/image_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="false"
+            android:layout_marginStart="23dp"
+            android:src="@drawable/ic_theme_24dp" />
+
+        <TextView
+            android:id="@+id/text_select_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="false"
+            android:layout_marginStart="70dp"
+            android:text="@string/select_theme"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button_white_theme"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="74dp"
+            android:background="@drawable/button_white" />
+
+        <Button
+            android:id="@+id/button_black_theme"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/button_black" />
+
+        <TextView
+            android:id="@+id/text_auto_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/text_select_theme"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/auto_theme_change"
+            android:textSize="18sp" />
+
+        <Switch
+            android:id="@+id/switch_auto_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/text_auto_change"
+            android:layout_marginEnd="30dp"
+            android:layout_alignParentEnd="true"
+            android:text="@string/dialog_negative" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/image_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="23dp"
+            app:srcCompat="@drawable/ic_reset_24dp" />
+
+        <TextView
+            android:id="@+id/text_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="81dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/reset_app"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/delete_content" />
+    </RelativeLayout>
+
+</RelativeLayout>

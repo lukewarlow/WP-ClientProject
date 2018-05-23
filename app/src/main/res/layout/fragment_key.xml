@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_green_marker"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="50dp">
+        <ImageView
+            android:id="@+id/image_green_pharmacy"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/pharmacy_marker_green"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/image_green_pharmacy"
+            android:text="@string/this_signifies_that_a_pharmacy_is_open_and_offers_welsh"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_green_marker_greyed"
+        android:layout_below="@id/layout_green_marker"
+        android:layout_marginBottom="16dp">
+        <ImageView
+            android:id="@+id/image_green_pharmacy_greyed"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/pharmacy_marker_green_greyed"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/image_green_pharmacy_greyed"
+            android:text="@string/this_signifies_that_a_pharmacy_is_closed_but_offers_welsh"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_red_marker"
+        android:layout_below="@id/layout_green_marker_greyed"
+        android:layout_marginBottom="16dp">
+        <ImageView
+            android:id="@+id/image_red_pharmacy"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/pharmacy_marker_red"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/image_red_pharmacy"
+            android:text="@string/this_signifies_that_a_pharmacy_is_open_but_doesn_t_offer_welsh"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_red_marker_greyed"
+        android:layout_below="@id/layout_red_marker"
+        android:layout_marginBottom="16dp">
+        <ImageView
+            android:id="@+id/image_red_pharmacy_greyed"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/pharmacy_marker_red_greyed"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/image_red_pharmacy_greyed"
+            android:text="@string/this_signifies_that_a_pharmacy_is_closed_and_doesn_t_offer_welsh"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</RelativeLayout>

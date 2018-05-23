@@ -1,0 +1,135 @@
+<resources>
+    <string name="serverUrl" translatable="false">https://lukewarlow.pythonanywhere.com</string>
+
+    <string name="app_name">Welsh Pharmacy</string>
+    <string name="location_permission_granted">Location permission granted.</string>
+    <string name="location_permission_denied">Location permission denied.</string>
+    <string name="location_permission_request">Permission to access location required for an enhanced app experience.</string>
+    <string name="location_not_found">Unable to get current location.</string>
+    <string name="location_dialog_title">Location request</string>
+    <string name="call_dialog_title">Call Pharmacy</string>
+    <string name="call_dialog_message">Would you like to call %s?</string>
+    <string name="dialog_negative">No</string>
+    <string name="dialog_positive">Yes</string>
+    <string name="dialog_ok">OK</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="service_check_no_connection">We can\'t connect to the Google play services.</string>
+    <string name="open_status_open">Currently open.</string>
+    <string name="open_status_closed">Currently closed.</string>
+    <string name="next_open">Open %s at %s</string>
+    <string name="today">today</string>
+    <string name="nav_map">Map</string>
+    <string name="nav_list">List</string>
+    <string name="nav_reminders">Reminders</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_app_info">App Information</string>
+    <string name="nav_help">Help</string>
+
+    <string name="no_reminders">Click on the button below to begin creating your reminder.</string>
+    <string name="add_reminder">Reminder</string>
+    <string name="details">Details</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="repeat">Repeat</string>
+    <string name="repeat_off">Off</string>
+    <string name="repeat_no">Repetition Interval </string>
+    <string name="repeat_type">Type of Repetitions</string>
+    <string name="action_save_reminder">Save Reminder</string>
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+    <string name="discard">Discard</string>
+    <string name="keep_editing">Keep Editing</string>
+    <string name="delete_reminder_dialog_msg">Delete this Reminder?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="name">Name</string>
+    <string name="number">Number</string>
+    <string name="closed">Closed</string>
+    <string name="welsh_available">Welsh available</string>
+    <string name="welsh_unavailable">Welsh not available</string>
+    <string name="opening_times">Opening Times</string>
+    <string name="services">Services</string>
+    <string name="filter_applied">Filters applied</string>
+    <string name="filters_cleared">Filters cleared</string>
+    <string name="dialog_clear">Clear</string>
+
+    <string name="dialog_title_no_internet">No internet</string>
+    <string name="dialog_message_no_cache_internet">You\'re not connected to the internet and there is no cached pharmacy data. Please connect to the internet, click yes to continue loading app.</string>
+    <string name="dialog_message_no_internet">You\'re not connected to the internet, pharmacy data may be outdated.</string>
+    <string name="welcome">Welcome</string>
+    <string name="language">English</string>
+    <string name="postcode_request">Would you like to enter a postcode instead?</string>
+    <string name="get_location">Get Location</string>
+    <string name="dialog_title_out_of_wales">Out of wales</string>
+    <string name="dialog_message_out_of_wales">You\'re not in wales, this app only shows information for pharmacies in wales.</string>
+    <string name="location_found">Location found</string>
+    <string name="invalid_postcode">Postcode not valid</string>
+    <string name="gp_details">GP Details</string>
+    <string name="gp_name">GP Name</string>
+    <string name="doctor_name">Doctor Name</string>
+    <string name="gp_address">GP Address</string>
+    <string name="telephone">Telephone</string>
+    <string name="gp_details_saved">GP Details saved</string>
+    <string name="font_size">Font Size</string>
+    <string name="title_language">Language</string>
+    <string name="select_radius">Select radius</string>
+    <string name="miles">%s Miles</string>
+    <string name="select_theme">Select Theme</string>
+    <string name="reset_app">Reset App</string>
+    <string name="delete_content">Delete Content</string>
+    <string name="auto_theme_change">Change automatically</string>
+    <string name="must_enter_something">You must enter something.</string>
+    <string name="note_saved_successfully">Note saved successfully</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="note_successfully_edited">Note successfully edited.</string>
+    <string name="repeat_with_interval">Every %s %ss</string>
+    <string name="repeat_without_interval">Every %s</string>
+    <string name="reminder_edited_successfully">Reminder edited successfully</string>
+    <string name="reminder_successfully_saved">Reminder successfully saved</string>
+    <string name="enter_number">Enter Number</string>
+    <string name="dialog_close">Close</string>
+    <string name="select_type">Select Type</string>
+    <string name="reminder">Reminder</string>
+    <string name="save">Save</string>
+    <string name="nav_notes">Notes</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="no_notes">Click on the button below to begin creating notes.</string>
+    <string name="location">Location</string>
+    <string name="deny">Deny</string>
+    <string name="allow">Allow</string>
+
+    <!-- Help page strings -->
+    <string name="help_page_title">Help</string>
+    <string name="help_sub1_title">FAQ</string>
+
+    <string name="storing_text">All data about your application is stored locally on your phone.</string>
+
+    <string name="privacy_text">In terms of storing your data, we look to use as little information as possible.</string>
+
+    <string name="gdpr_text">With new European regulations on storing information, you may be asked for permissions often. You are free to not respond and we will not use your information. However certain features may then be disabled.</string>
+
+    <string name="help_sub2_title">Feedback</string>
+    <string name="feedback_text">If you wish to leave us feedback, you can do so by visiting our Google Play Store page. We appreciate all feedback.</string>
+
+    <!--Application Information strings -->
+    <string name="info_page_title">Application Information</string>
+    <string name="info_page_text">This application was developed by students from Cardiff University, School of Computer Science and Informatics, as part of a project for the School of Pharmacy and Pharmaceuticals Sciences.</string>
+
+    <string name="app_version">Version</string>
+    <string name="postcode">Postcode</string>
+    <string name="postcode_cleared">Postcode cleared</string>
+    <string name="note">Note</string>
+    <string name="delete_note_dialog_msg">Delete this note?</string>
+    <string name="reminders">Reminders</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="storing_your_data">Storing your data</string>
+    <string name="gp_details_cleared">GP Details cleared</string>
+    <string name="delete_gp_details_dialog_msg">Delete GP details?</string>
+    <string name="pharmacy_open">Pharmacy open</string>
+    <string name="select_filters">Select filters</string>
+    <string name="this_signifies_that_a_pharmacy_is_open_and_offers_welsh">This signifies that a pharmacy is open and offers Welsh.</string>
+    <string name="this_signifies_that_a_pharmacy_is_closed_but_offers_welsh">This signifies that a pharmacy is closed but offers Welsh.</string>
+    <string name="this_signifies_that_a_pharmacy_is_open_but_doesn_t_offer_welsh">This signifies that a pharmacy is open but doesn\'t offer Welsh.</string>
+    <string name="this_signifies_that_a_pharmacy_is_closed_and_doesn_t_offer_welsh">This signifies that a pharmacy is closed and doesn\'t offer Welsh.</string>
+</resources>

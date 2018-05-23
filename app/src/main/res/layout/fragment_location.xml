@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text_location_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="64dp"
+        android:textAlignment="center"
+        android:textSize="25sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible"
+        android:id="@+id/layout_postcode">
+
+        <TextView
+            android:id="@+id/text_postcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="132dp"
+            android:text="@string/postcode_request"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_editor_absoluteY="138dp" />
+
+        <EditText
+            android:id="@+id/edit_text_postcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="170dp"
+            android:inputType="textPostalAddress"
+            android:hint="@string/postcode"
+            android:maxLength="8"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            tools:layout_editor_absoluteX="127dp"
+            tools:layout_editor_absoluteY="178dp" />
+
+        <Button
+            android:id="@+id/button_use_postcode"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="228dp"
+            android:text="@string/get_location"
+            tools:layout_editor_absoluteX="132dp"
+            tools:layout_editor_absoluteY="245dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_radius"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/layout_postcode"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/text_radius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="18dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/select_radius"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/text_selected_radius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/text_radius"
+            android:layout_below="@id/text_radius"
+            android:layout_marginTop="5dp"
+            android:text="@string/miles"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/text_selected_radius"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp">
+
+            <TextView
+                android:id="@+id/text_min_miles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/seek_radius"
+                android:layout_alignParentStart="true"
+                android:text="5"/>
+
+            <SeekBar
+                android:id="@+id/seek_radius"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="266dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_toEndOf="@id/text_min_miles"
+                android:layout_toStartOf="@+id/text_max_miles"
+                android:max="10"
+                android:progress="0" />
+
+            <TextView
+                android:id="@+id/text_max_miles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/seek_radius"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

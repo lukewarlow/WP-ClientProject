@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/fragment_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="18dp"
+        android:textSize="20sp"
+        android:hint="@string/gp_details" />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_gp_name"
+        android:layout_below="@id/fragment_title"
+        android:layout_marginTop="18dp">
+
+        <ImageView
+            android:id="@+id/image_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/gp_name"
+            app:srcCompat="@drawable/ic_font_24dp"
+            android:layout_centerVertical="true"/>
+
+        <EditText
+            android:id="@+id/gp_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/gp_name"
+            android:layout_toEndOf="@id/image_name"
+            android:layout_centerVertical="true"/>
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_dr_name"
+        android:layout_below="@id/layout_gp_name"
+        android:layout_marginTop="18dp">
+        <ImageView
+            android:id="@+id/image_dr_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_person_outline_24dp"
+            android:layout_centerVertical="true"/>
+
+        <EditText
+            android:id="@+id/doctor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/doctor_name"
+            android:layout_toEndOf="@id/image_dr_name"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_address"
+        android:layout_below="@id/layout_dr_name"
+        android:layout_marginTop="18dp">
+        <ImageView
+            android:id="@+id/image_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_gps_24dp"
+            android:layout_centerVertical="true"/>
+
+        <EditText
+            android:id="@+id/text_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/gp_address"
+            android:layout_toEndOf="@id/image_address"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_phone"
+        android:layout_below="@id/layout_address"
+        android:layout_marginTop="18dp">
+        <ImageView
+            android:id="@+id/image_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_phone_24dp"
+            android:layout_centerVertical="true"/>
+
+        <EditText
+            android:id="@+id/gp_telephone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="phone"
+            android:hint="@string/telephone"
+            android:layout_toEndOf="@id/image_phone"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_save"
+        android:layout_below="@id/layout_phone"
+        android:layout_marginTop="18dp">
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="?attr/colorPrimary"
+            android:backgroundTint="?attr/colorPrimary"
+            android:text="@string/save" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_clear"
+        android:layout_below="@id/layout_save"
+        android:layout_marginTop="18dp">
+        <Button
+            android:id="@+id/clear_button"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="?attr/colorPrimary"
+            android:backgroundTint="?attr/colorPrimary"
+            android:text="@string/dialog_clear"/>
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

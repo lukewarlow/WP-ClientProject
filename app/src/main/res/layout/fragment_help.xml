@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/text_title_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/help_page_title"
+        android:textSize="30sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_faq"
+        android:layout_below="@id/text_title_help"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/text_title_faq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/help_sub1_title"
+            android:textSize="23sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_title_faq"
+            android:id="@+id/layout_data"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/text_title_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/storing_your_data"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/text_message_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_title_data"
+                android:text="@string/storing_text"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_data"
+            android:id="@+id/layout_privacy"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/text_title_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/privacy_policy"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/text_message_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_title_privacy"
+                android:text="@string/privacy_text"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_privacy"
+            android:id="@+id/layout_gdpr"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/text_title_GDPR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GDPR"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/text_message_GDPR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_title_GDPR"
+                android:text="@string/gdpr_text"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_feedback"
+        android:layout_below="@id/layout_faq"
+        android:layout_marginTop="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/text_title_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/help_sub2_title"
+            android:textSize="23sp" />
+        <TextView
+            android:id="@+id/text_message_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_title_feedback"
+            android:text="@string/feedback_text"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</RelativeLayout>

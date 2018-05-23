@@ -1,0 +1,299 @@
+<!-- Adapted from: https://www.youtube.com/watch?v=P46LTiPlvUA
+    I visited this source on the 12/04/2018 at 18:21 -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:id="@+id/add_reminder_layout_top"
+        android:background="?attr/colorPrimary"
+        android:orientation="vertical"
+        android:layout_height="148dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/text_reminder"
+            android:layout_marginLeft="72dp"
+            android:hint="@string/add_reminder"
+            android:textSize="25dp"
+            android:lines="4"
+            android:minLines="4"
+            android:gravity="top|left"
+            android:textColor="@android:color/white"
+            android:scrollHorizontally="false"
+            android:textColorHint="@color/primary_text_disabled_material_dark"
+            android:inputType="textCapWords|textMultiLine"
+            android:layout_marginRight="@dimen/reminder_editext_margin"
+            android:layout_height="140dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/add_reminder_layout_top"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="8dp"
+                android:text="@string/details"
+                android:id="@+id/details"
+                android:textSize="17dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="72dp"
+                android:layout_height="72dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:id="@+id/date"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_height="72dp">
+
+                <ImageView
+                    android:id="@+id/image_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="32dp"
+                    android:src="@drawable/ic_date_24dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/image_date"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/date_text"
+                        android:layout_width="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/date" />
+
+                    <TextView
+                        android:id="@+id/set_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:id="@+id/time"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_height="72dp">
+
+                <ImageView
+                    android:id="@+id/image_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="32dp"
+                    android:src="@drawable/ic_time_24dp"
+                    android:layout_centerVertical="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/image_time"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/time_text"
+                        android:layout_width="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/time" />
+
+                    <TextView
+                        android:id="@+id/set_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/repeat"
+                android:layout_height="72dp">
+
+                <ImageView
+                    android:id="@+id/image_repeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="32dp"
+                    android:src="@drawable/ic_repeat_24dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/repeat_ll"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/image_repeat"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/repeat_text"
+                        android:layout_width="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/repeat" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/set_repeat"
+                        android:textSize="15dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/switch_repeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:checked="true"
+                    android:textOn="@string/on"
+                    android:textOff="@string/off"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/RepeatNo"
+                android:clickable="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_height="72dp">
+
+                <ImageView
+                    android:id="@+id/image_repeat_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="32dp"
+                    android:src="@drawable/ic_repeat_no_24dp"
+                    android:layout_centerVertical="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/image_repeat_no"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/repeat_no_text"
+                        android:layout_width="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/repeat_no" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/set_repeat_no"
+                        android:textSize="15dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/RepeatType"
+                android:clickable="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_height="72dp">
+
+                <ImageView
+                    android:id="@+id/image_repeat_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="32dp"
+                    android:src="@drawable/ic_repeat_type_24dp"
+                    android:layout_centerVertical="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/image_repeat_type"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/repeat_type_text"
+                        android:layout_width="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/repeat_type" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/set_repeat_type"
+                        android:textSize="15dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/add_reminder_layout_top"
+        android:background="@drawable/toolbar_dropshadow" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="122dp"
+        android:background="?attr/colorAccent"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_notifications_off_grey_24dp" />
+
+</RelativeLayout>
